@@ -1,1 +1,3 @@
-alert("Hello world");
+import { loadWebsite } from "./website.js";
+
+loadWebsite();
