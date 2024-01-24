@@ -84,7 +84,7 @@ body.dark {
     --header-background: linear-gradient(rgba(26, 29, 26, 0.5), rgba(26, 29, 26, 0.8), rgb(26, 29, 26));
     --header-btn-hover: var(--red-light);
     --h1-text: var(--green-light);
-    --element-background: rgba(29, 27, 27, 0.596);
+    --element-background: rgba(26, 29, 26, 0.5);;
     --contact-form-background: rgb(0, 32, 13);;
 }
 
