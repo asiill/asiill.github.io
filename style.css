@@ -55,7 +55,7 @@ body {
     --h1-text: var(--red-dark);
     --title-text: rgb(44, 43, 43);
 
-    --header-background: rgb(238, 215, 197);
+    --header-background: linear-gradient(rgb(238, 215, 197, 0.5), rgb(238, 215, 197, 0.8), rgb(238, 215, 197));
     --header-btn-background: var(--header-background);
     --header-btn-text: var(--text-color);
     --header-btn-hover: var(--green-light);
@@ -81,7 +81,7 @@ body.dark {
     --background-color: rgb(0, 0, 0);
     --text-color: rgb(255, 255, 255);
     --title-text: rgb(209, 206, 206);
-    --header-background: rgb(26, 29, 26);
+    --header-background: linear-gradient(rgba(26, 29, 26, 0.5), rgba(26, 29, 26, 0.8), rgb(26, 29, 26));
     --header-btn-hover: var(--red-light);
     --h1-text: var(--green-light);
     --element-background: rgba(29, 27, 27, 0.596);
@@ -150,7 +150,7 @@ header {
 
     position: relative;
     padding: var(--padding-base);
-    background-color: var(--header-background);
+    background: var(--header-background);
 }
 
 .first-header-row, .second-header-row {
@@ -167,22 +167,22 @@ header {
     gap: var(--gap-large);
 }
 
-.actions>button {
-    background-color: var(--header-btn-background);
+.actions > button {
+    background-color: transparent;
     color: var(--header-btn-text);
     font-size: var(--fs-base);
     font-family: var(--ff-base);
     border: transparent;
     cursor: pointer;
-    transition: transform 0.2s ease-out;
+    transition: all 0.2s ease-in-out;
 }
 
-.actions>button:hover {
+.actions > button:hover {
     color: var(--header-btn-hover);
     transform: scale(1.1);
 }
 
-.toggle-mode>img {
+.toggle-mode > img {
     display: flex;
     justify-content: center;
 
@@ -195,23 +195,23 @@ nav {
     gap: var(--gap-large);
 }
 
-nav>button {
-    background-color: var(--header-btn-background);
+nav > button {
+    background-color: transparent;
     color: var(--header-btn-text);
     font-size: var(--fs-base);
     font-family: var(--ff-base);
     font-weight: bold;
     border: transparent;
     cursor: pointer;
-    transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in-out;
 }
 
-nav>button:hover {
+nav > button:hover {
     text-transform: uppercase;
     color: var(--header-btn-hover);
 }
 
-nav>.active {
+nav > .active {
     text-transform: uppercase;
     color: var(--header-btn-hover);
 }
@@ -311,7 +311,7 @@ section {
     font-family: var(--ff-base);
     font-size: var(--fs-base);
     font-weight: bold;
-    background-color: var(--background-color);
+    background-color: transparent;
     color: var(--home-links-text);
     border: none;
     cursor: pointer;
