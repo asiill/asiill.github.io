@@ -13,92 +13,47 @@ export const getLanguageData = (type) => {
     return isFrenchMode ? french : english;
 };
 
+const updateText = (selector, data, key) => {
+    const el = document.querySelector(selector);
+    if (el) {
+        el.textContent = data[key];
+    }
+}
+
 const updateHeader = () => {
     const actionsData = getLanguageData("actions");
     const navData = getLanguageData("nav");
     
-    const language = document.querySelector(".toggle-language");
-    if (language) {
-        language.textContent = actionsData["switchTo"];
-    }
-
-    const home = document.querySelector(".home-btn");
-    if (home) {
-        home.textContent = navData["home"];
-    }
-
-    const about = document.querySelector(".about-btn");
-    if (about) {
-        about.textContent = navData["about"];
-    }
-
-    const projects = document.querySelector(".projects-btn");
-    if (projects) {
-        projects.textContent = navData["projects"];
-    }
-
-    const contact = document.querySelector(".contact-btn");
-    if (contact) {
-        contact.textContent = navData["contact"];
-    }
+    updateText(".toggle-language", actionsData, "switchTo");
+    updateText(".home-nav", navData, "home");
+    updateText(".about-nav", navData, "about");
+    updateText(".projects-nav", navData, "projects");
+    updateText(".contact-nav", navData, "contact");
 };
 
 const updateHome = () => {
     const homeData = getLanguageData("home");
 
-    const greeting = document.querySelector(".greeting");
-    if (greeting) {
-        greeting.textContent = homeData["greeting"];
-    }
-
-    const title = document.querySelector(".title");
-    if (title) {
-        title.textContent = homeData["title"];
-    }
-
-    const aboutLink = document.querySelector(".about-link");
-    if (aboutLink) {
-        aboutLink.textContent = homeData["aboutText"];
-    }
-
-    const projectsLink = document.querySelector(".projects-link");
-    if (projectsLink) {
-        projectsLink.textContent = homeData["projectsText"];
-    }
+    updateText(".greeting", homeData, "greeting");
+    updateText(".title", homeData, "title");
+    updateText(".about-link", homeData, "aboutText");
+    updateText(".projects-link", homeData, "projectsText");
 };
 
 const updateAbout = () => {
     const aboutData = getLanguageData("about");
 
-    const introHeader = document.querySelector(".intro-header");
-    if (introHeader) {
-        introHeader.textContent = aboutData["introHeader"];
-    }
-
-    const introTitle = document.querySelector(".intro-title");
-    if (introTitle) {
-        introTitle.textContent = aboutData["introTitle"];
-    }
-
-    const introDescription = document.querySelector(".intro-description");
-    if (introDescription) {
-        introDescription.textContent = aboutData["introDescription"];
-    }
-
-    const toolsHeader = document.querySelector(".tools-header");
-    if (toolsHeader) {
-        toolsHeader.textContent = aboutData["toolsHeader"];
-    }
+    updateText(".intro-header", aboutData, "introHeader");
+    updateText(".intro-title", aboutData, "introTitle");
+    updateText(".intro-description", aboutData, "introDescription");
+    updateText(".tools-header", aboutData, "toolsHeader");
 };
 
 const updateProjects = () => {
     const projectsData = getLanguageData("projects");
     const list = projectsData["list"];
 
-    const header = document.querySelector(".projects-header");
-    if (header) {
-        header.textContent = projectsData["header"];
-    }
+    updateText(".projects-header", projectsData, "header");
 
     const descriptions = document.querySelectorAll(".project-description");
     if (descriptions) {
@@ -115,30 +70,11 @@ const updateProjects = () => {
 const updateContact = () => {
     const contactData = getLanguageData("contact");
 
-    const header = document.querySelector(".contact-header");
-    if (header) {
-        header.textContent = contactData["header"];
-    }
-
-    const name = document.querySelector("label[for='contact-name']");
-    if (name) {
-        name.textContent = contactData["name"];
-    }
-
-    const email = document.querySelector("label[for='contact-email']");
-    if (email) {
-        email.textContent = contactData["email"];
-    }
-
-    const message = document.querySelector("label[for='contact-message']");
-    if (message) {
-        message.textContent = contactData["message"];
-    }
-
-    const submit = document.getElementById("submit-btn");
-    if (submit) {
-        submit.textContent = contactData["submit"];
-    }
+    updateText(".contact-header", contactData, "header");
+    updateText("label[for='contact-name']", contactData, "name");
+    updateText("label[for='contact-email']", contactData, "email");
+    updateText("label[for='contact-message']", contactData, "message");
+    updateText("#submit-btn", contactData, "submit");
 };
 
 export const updateLanguageData = () => {
