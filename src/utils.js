@@ -25,10 +25,10 @@ const updateHeader = () => {
     const navData = getLanguageData("nav");
     
     updateText(".toggle-language", actionsData, "switchTo");
-    updateText(".home-nav", navData, "home");
-    updateText(".about-nav", navData, "about");
-    updateText(".projects-nav", navData, "projects");
-    updateText(".contact-nav", navData, "contact");
+    updateText(".home-btn", navData, "home");
+    updateText(".about-btn", navData, "about");
+    updateText(".projects-btn", navData, "projects");
+    updateText(".contact-btn", navData, "contact");
 };
 
 const updateHome = () => {
