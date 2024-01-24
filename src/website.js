@@ -15,7 +15,9 @@ const getCurrentPage = () => {
 const handlePopState = (e) => {
     isPopStateEvent = true;
     const currentPage = getCurrentPage();
+    const active = document.querySelector(".active");
     if (e.state && e.state.page !== currentPage) {
+        active.classList.remove("active");
         if (e.state.page === "home") {
             loadHome(isPopStateEvent);
         } else if (e.state.page === "about") {
