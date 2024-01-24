@@ -1,6 +1,6 @@
-# Portfolio
+# Portfolio site
 
-View my portfolio at → https://asiill.github.io
+View my portfolio at → https://asiill.github.io/
 
 ## Built with
 
