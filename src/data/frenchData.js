@@ -19,7 +19,7 @@ const frenchData = {
 
     about: {
         introHeader: "À propos",
-        introTitle: "Hey! Je m'appelle Aseel, et je suis une développeur web front-end basée à la ville de Montréal, au Québec.",
+        introTitle: "Hey! Je m'appelle Aseel, et je suis développeur web front-end basée à la ville de Montréal, au Québec.",
         introDescription: "...",
         toolsHeader: "Compétences",
     },
