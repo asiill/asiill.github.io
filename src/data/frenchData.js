@@ -12,7 +12,7 @@ const frenchData = {
 
     home: {
         greeting: "Salut, je suis",
-        title: "une développeur web front-end",
+        title: "développeur web front-end",
         aboutText: "➵ en savoir plus",
         projectsText: "➵ voir mes projets",
     },
